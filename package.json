@@ -1,0 +1,46 @@
+{
+	"name": "eslint-extjs",
+	"version": "0.0.1",
+	"description": "Grunt task to enable debugging for subsequent tasks.",
+	"homepage": "https://github.com/burnnat/grunt-debug",
+	
+	"author": {
+		"name": "Nat Burns",
+		"email": "nbaccount@burnskids.com"
+	},
+	
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://github.com/burnnat/eslint-extjs/blob/master/LICENSE"
+		}
+	],
+	
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/burnnat/eslint-extjs.git"
+	},
+	
+	"bugs": {
+		"url": "https://github.com/burnnat/eslint-extjs/issues"
+	},
+	
+	"engines": {
+		"node": ">=0.8.0"
+	},
+	
+	"dependencies": {},
+	
+	"devDependencies": {
+		"grunt": "~0.4.2",
+		"grunt-cli": "~0.1.11",
+		"grunt-mocha-test": "~0.8.1",
+		
+		"eslint-tester": "latest"
+	},
+	
+	"keywords": [
+		"eslint",
+		"extjs"
+	]
+}

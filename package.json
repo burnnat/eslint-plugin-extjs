@@ -39,6 +39,10 @@
 		"eslint-tester": "latest"
 	},
 	
+	"scripts": {
+		"test": "node ./node_modules/grunt-cli/bin/grunt test"
+	},
+	
 	"keywords": [
 		"eslint",
 		"extjs"

@@ -35,6 +35,20 @@ eslintTester.addRuleTest("lib/rules/ext-deps", {
 				Ext: true,
 				App: true
 			}
+		},
+		{
+			code: "Ext.define('App.Class', { extend: 'App.Parent' });",
+			global: {
+				Ext: true,
+				App: true
+			}
+		},
+		{
+			code: "Ext.define('App.Class', { extend: 'App.Parent', constructor: function() { App.Parent.register(this); } });",
+			global: {
+				Ext: true,
+				App: true
+			}
 		}
 	],
 	invalid: [

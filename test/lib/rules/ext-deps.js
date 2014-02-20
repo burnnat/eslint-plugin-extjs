@@ -23,6 +23,13 @@ eslintTester.addRuleTest("lib/rules/ext-deps", {
 			}
 		},
 		{
+			code: "Ext.define('App.Class', { requires: ['Ext.Ajax'], constructor: function() { this.timeout = Ext.Ajax.defaultTimeout; } });",
+			global: {
+				Ext: true,
+				App: true
+			}
+		},
+		{
 			code: "Ext.define('App.Class', { uses: ['App.Panel'], constructor: function() { this.panel = Ext.create('App.Panel'); } });",
 			global: {
 				Ext: true,
@@ -45,6 +52,13 @@ eslintTester.addRuleTest("lib/rules/ext-deps", {
 		},
 		{
 			code: "Ext.define('App.Class', { extend: 'App.Parent', constructor: function() { App.Parent.register(this); } });",
+			global: {
+				Ext: true,
+				App: true
+			}
+		},
+		{
+			code: "Ext.define('App.Class', { constructor: function() { this.names = Ext.Array.from(Ext.ClassManager.getName(this.self)); } });",
 			global: {
 				Ext: true,
 				App: true

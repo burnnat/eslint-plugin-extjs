@@ -144,6 +144,45 @@ eslintTester.addRuleTest("lib/rules/ext-deps", {
 					type: "CallExpression"
 				}
 			]
+		},
+		{
+			code: "Ext.define('App.Class', { layout: 'fit' });",
+			global: {
+				Ext: true,
+				App: true
+			},
+			errors: [
+				{
+					message: "Class Ext.layout.container.Fit is referenced by App.Class but not listed as a dependency.",
+					type: "CallExpression"
+				}
+			]
+		},
+		{
+			code: "Ext.define('App.Class', { proxy: { type: 'ajax' } });",
+			global: {
+				Ext: true,
+				App: true
+			},
+			errors: [
+				{
+					message: "Class Ext.data.proxy.Ajax is referenced by App.Class but not listed as a dependency.",
+					type: "CallExpression"
+				}
+			]
+		},
+		{
+			code: "Ext.define('App.Class', { constructor: function() { Ext.apply(this, { items: [{ xtype: 'button', text: 'Label' }] }); } });",
+			global: {
+				Ext: true,
+				App: true
+			},
+			errors: [
+				{
+					message: "Class Ext.button.Button is referenced by App.Class but not listed as a dependency.",
+					type: "CallExpression"
+				}
+			]
 		}
 	]
 });

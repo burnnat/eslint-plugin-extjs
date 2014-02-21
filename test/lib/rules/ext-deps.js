@@ -30,6 +30,20 @@ eslintTester.addRuleTest("lib/rules/ext-deps", {
 			}
 		},
 		{
+			code: "Ext.define('App.Class', { requires: ['Ext.container.Viewport'], constructor: function() { this.viewport = new Ext.Viewport(); } });",
+			global: {
+				Ext: true,
+				App: true
+			}
+		},
+		{
+			code: "Ext.define('App.Class', { requires: ['Ext.Viewport'], constructor: function() { this.viewport = new Ext.container.Viewport(); } });",
+			global: {
+				Ext: true,
+				App: true
+			}
+		},
+		{
 			code: "Ext.define('App.Class', { uses: ['App.Panel'], constructor: function() { this.panel = Ext.create('App.Panel'); } });",
 			global: {
 				Ext: true,

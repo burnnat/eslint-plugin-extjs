@@ -159,7 +159,7 @@ eslintTester.addRuleTest("lib/rules/ext-deps", {
 			]
 		},
 		{
-			code: "Ext.define('App.Class', { proxy: { type: 'ajax' } });",
+			code: "Ext.define('App.Class', { proxy: { type: 'ajax', reader: 'json', writer: 'xml' } });",
 			global: {
 				Ext: true,
 				App: true
@@ -168,11 +168,19 @@ eslintTester.addRuleTest("lib/rules/ext-deps", {
 				{
 					message: "Class Ext.data.proxy.Ajax is referenced by App.Class but not listed as a dependency.",
 					type: "CallExpression"
+				},
+				{
+					message: "Class Ext.data.reader.Json is referenced by App.Class but not listed as a dependency.",
+					type: "CallExpression"
+				},
+				{
+					message: "Class Ext.data.writer.Xml is referenced by App.Class but not listed as a dependency.",
+					type: "CallExpression"
 				}
 			]
 		},
 		{
-			code: "Ext.define('App.Class', { constructor: function() { Ext.apply(this, { items: [{ xtype: 'button', text: 'Label' }] }); } });",
+			code: "Ext.define('App.Class', { constructor: function() { Ext.apply(this, { items: [{ xtype: 'button', text: 'Label' }, 'grid'] }); } });",
 			global: {
 				Ext: true,
 				App: true
@@ -180,6 +188,10 @@ eslintTester.addRuleTest("lib/rules/ext-deps", {
 			errors: [
 				{
 					message: "Class Ext.button.Button is referenced by App.Class but not listed as a dependency.",
+					type: "CallExpression"
+				},
+				{
+					message: "Class Ext.grid.Panel is referenced by App.Class but not listed as a dependency.",
 					type: "CallExpression"
 				}
 			]

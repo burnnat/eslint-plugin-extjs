@@ -1,0 +1,14 @@
+{
+	"Ext.Array": true,
+	"Ext.Base": true,
+	"Ext.Class": true,
+	"Ext.ClassManager": true,
+	"Ext.Date": true,
+	"Ext.Error": true,
+	"Ext.Function": true,
+	"Ext.Loader": true,
+	"Ext.Number": true,
+	"Ext.Object": true,
+	"Ext.String": true,
+	"Ext.Version": true
+}

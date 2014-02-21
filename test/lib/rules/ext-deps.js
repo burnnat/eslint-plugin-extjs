@@ -65,6 +65,13 @@ eslintTester.addRuleTest("lib/rules/ext-deps", {
 			}
 		},
 		{
+			code: "Ext.define('App.Class', { extend: 'Ext.data.proxy.Ajax', requires: ['Ext.data.reader.Array', 'Ext.data.writer.Xml'], defaultReaderType: 'array', defaultWriterType: 'xml' });",
+			global: {
+				Ext: true,
+				App: true
+			}
+		},
+		{
 			code: "Ext.define('App.Class', { extend: 'App.Parent', constructor: function() { App.Parent.register(this); } });",
 			global: {
 				Ext: true,

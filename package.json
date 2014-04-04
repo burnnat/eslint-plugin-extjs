@@ -1,8 +1,8 @@
 {
 	"name": "eslint-extjs",
 	"version": "0.0.1",
-	"description": "Grunt task to enable debugging for subsequent tasks.",
-	"homepage": "https://github.com/burnnat/grunt-debug",
+	"description": "ESLint rules for projects using the ExtJS framework.",
+	"homepage": "https://github.com/burnnat/eslint-extjs",
 	
 	"author": {
 		"name": "Nat Burns",

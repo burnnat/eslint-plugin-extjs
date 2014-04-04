@@ -15,7 +15,8 @@ var eslintTester = require("eslint-tester");
 
 eslintTester.addRuleTest("lib/rules/no-ext-create", {
 	valid: [
-		"var panel = new Ext.util.Something({ create: true });"
+		"var panel = new Ext.util.Something({ create: true });",
+		"var panel = Ext.create(getDynamicClassName(), { config: true });"
 	],
 	invalid: [
 		{

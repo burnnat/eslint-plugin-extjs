@@ -1,5 +1,6 @@
 eslint-extjs
 ============
+[![NPM version](https://badge.fury.io/js/eslint-extjs.png)](http://badge.fury.io/js/eslint-extjs)
 
 ESLint rules for projects using the ExtJS framework.
 

@@ -1,8 +1,8 @@
-eslint-extjs
+eslint-plugin-extjs
 ============
 [![NPM version](https://badge.fury.io/js/eslint-plugin-extjs.png)](http://badge.fury.io/js/eslint-plugin-extjs)
 
-ESLint rules for projects using the ExtJS framework.
+ESLint rules for projects using the ExtJS framework. These rules are targeted for use with ExtJS 4.x. Pull requests for compatibility with 5.x are welcome!
 
 ## Rule Details
 

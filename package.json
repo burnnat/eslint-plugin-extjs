@@ -1,8 +1,8 @@
 {
-	"name": "eslint-extjs",
-	"version": "0.0.1",
+	"name": "eslint-plugin-extjs",
+	"version": "0.0.2",
 	"description": "ESLint rules for projects using the ExtJS framework.",
-	"homepage": "https://github.com/burnnat/eslint-extjs",
+	"homepage": "https://github.com/burnnat/eslint-plugin-extjs",
 	
 	"author": {
 		"name": "Nat Burns",
@@ -12,7 +12,7 @@
 	"licenses": [
 		{
 			"type": "MIT",
-			"url": "https://github.com/burnnat/eslint-extjs/blob/master/LICENSE"
+			"url": "https://github.com/burnnat/eslint-plugin-extjs/blob/master/LICENSE"
 		}
 	],
 	
@@ -20,11 +20,11 @@
 	
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/burnnat/eslint-extjs.git"
+		"url": "https://github.com/burnnat/eslint-plugin-extjs.git"
 	},
 	
 	"bugs": {
-		"url": "https://github.com/burnnat/eslint-extjs/issues"
+		"url": "https://github.com/burnnat/eslint-plugin-extjs/issues"
 	},
 	
 	"engines": {

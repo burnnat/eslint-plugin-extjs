@@ -16,6 +16,8 @@
 		}
 	],
 	
+	"main": "index.js",
+	
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/burnnat/eslint-extjs.git"
@@ -31,11 +33,16 @@
 	
 	"dependencies": {},
 	
+	"peerDependencies": {
+		"eslint": ">=0.8.0"
+	},
+	
 	"devDependencies": {
-		"grunt": "~0.4.2",
-		"grunt-cli": "~0.1.11",
-		"grunt-mocha-test": "~0.8.1",
+		"grunt": "~0.4.5",
+		"grunt-cli": "~0.1.13",
+		"grunt-mocha-test": "~0.12.7",
 		
+		"eslint": "latest",
 		"eslint-tester": "latest"
 	},
 	
@@ -45,6 +52,7 @@
 	
 	"keywords": [
 		"eslint",
+		"eslintplugin",
 		"extjs"
 	]
 }

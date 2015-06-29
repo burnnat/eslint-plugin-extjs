@@ -1,6 +1,6 @@
 eslint-plugin-extjs
 ============
-[![npm](https://img.shields.io/npm/v/eslint-plugin-extjs.svg)]() [![Travis](https://img.shields.io/travis/burnnat/eslint-plugin-extjs.svg)]() [![Gemnasium](https://img.shields.io/gemnasium/burnnat/eslint-plugin-extjs.svg)]()
+[![npm](https://img.shields.io/npm/v/eslint-plugin-extjs.svg)](https://npmjs.org/package/eslint-plugin-extjs) [![Travis](https://img.shields.io/travis/burnnat/eslint-plugin-extjs.svg)](https://travis-ci.org/burnnat/eslint-plugin-extjs) [![Gemnasium](https://img.shields.io/gemnasium/burnnat/eslint-plugin-extjs.svg)](https://gemnasium.com/burnnat/eslint-plugin-extjs)
 
 ESLint rules for projects using the ExtJS framework. These rules are targeted for use with ExtJS 4.x. Pull requests for compatibility with 5.x are welcome!
 

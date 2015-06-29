@@ -18,6 +18,20 @@ var eslintTester = new ESLintTester(linter);
 eslintTester.addRuleTest("lib/rules/ext-deps", {
 	valid: [
 		{
+			code: "Ext.require('App.Class');",
+			global: {
+				Ext: true,
+				App: true
+			}
+		},
+		{
+			code: "Ext.util.History.back();",
+			global: {
+				Ext: true,
+				App: true
+			}
+		},
+		{
 			code: "Ext.define('App.Class', { requires: ['Ext.panel.Panel'], constructor: function() { this.panel = new Ext.panel.Panel(); } });",
 			global: {
 				Ext: true,

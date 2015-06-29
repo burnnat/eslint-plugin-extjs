@@ -33,7 +33,7 @@
     "grunt-cli": "~0.1.13",
     "grunt-mocha-test": "~0.12.7",
     "eslint": "latest",
-    "eslint-tester": "~0.7.0"
+    "eslint-tester": "latest"
   },
   "scripts": {
     "test": "node ./node_modules/grunt-cli/bin/grunt test"

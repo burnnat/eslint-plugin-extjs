@@ -7,15 +7,15 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-var linter = require("eslint").linter;
-var ESLintTester = require("eslint-tester");
-var eslintTester = new ESLintTester(linter);
+var rule = require("../../../lib/rules/no-ext-create");
+var RuleTester = require("eslint").RuleTester;
+var tester = new RuleTester();
 
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
 
-eslintTester.addRuleTest("lib/rules/no-ext-create", {
+tester.run("no-ext-create", rule, {
 	valid: [
 		"var panel = new Ext.util.Something({ create: true });",
 		"var panel = Ext.create(getDynamicClassName(), { config: true });"

@@ -7,15 +7,15 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-var linter = require("eslint").linter;
-var ESLintTester = require("eslint-tester");
-var eslintTester = new ESLintTester(linter);
+var rule = require("../../../lib/rules/ext-deps");
+var RuleTester = require("eslint").RuleTester;
+var tester = new RuleTester();
 
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
 
-eslintTester.addRuleTest("lib/rules/ext-deps", {
+tester.run("ext-deps", rule, {
 	valid: [
 		{
 			code: "Ext.require('App.Class');",

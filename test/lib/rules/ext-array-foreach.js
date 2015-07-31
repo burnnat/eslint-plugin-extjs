@@ -7,15 +7,15 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-var linter = require("eslint").linter;
-var ESLintTester = require("eslint-tester");
-var eslintTester = new ESLintTester(linter);
+var rule = require("../../../lib/rules/ext-array-foreach");
+var RuleTester = require("eslint").RuleTester;
+var tester = new RuleTester();
 
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
 
-eslintTester.addRuleTest("lib/rules/ext-array-foreach", {
+tester.run("ext-array-foreach", rule, {
 	valid: [
 		"Ext.Array.forEach(['a'], function() {});",
 		"Ext.Array.each(['a'], function(item) { if (item === 'a') { return false; } });",

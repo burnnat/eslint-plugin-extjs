@@ -7,15 +7,15 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-var linter = require("eslint").linter;
-var ESLintTester = require("eslint-tester");
-var eslintTester = new ESLintTester(linter);
+var rule = require("../../../lib/rules/no-ext-multi-def");
+var RuleTester = require("eslint").RuleTester;
+var tester = new RuleTester();
 
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
 
-eslintTester.addRuleTest("lib/rules/no-ext-multi-def", {
+tester.run("no-ext-multi-def", rule, {
 	valid: [
 		"Ext.define('App.Single', {});",
 		"Ext.define('App.Single', { constructor: function() { Ext.define('Dynamic' + Ext.id(), {}); } });"
